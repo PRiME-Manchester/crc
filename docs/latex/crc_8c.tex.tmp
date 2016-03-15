@@ -1,0 +1,94 @@
+\hypertarget{crc_8c}{}\section{/\+Users/patrick/\+Development/github/crc/src/crc.c File Reference}
+\label{crc_8c}\index{/\+Users/patrick/\+Development/github/crc/src/crc.\+c@{/\+Users/patrick/\+Development/github/crc/src/crc.\+c}}
+{\ttfamily \#include \char`\"{}crc.\+h\char`\"{}}\\*
+Include dependency graph for crc.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{crc_8c_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH}~(8 $\ast$ sizeof(crc))
+\item 
+\#define \hyperlink{crc_8c_a118ad552670dbefa1df0ba72d147f5e1}{T\+O\+P\+B\+IT}~(1 $<$$<$ (\hyperlink{crc_8c_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH} -\/ 1))
+\item 
+\#define \hyperlink{crc_8c_ac5944d40ab44731450a57acd7f027f6a}{R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA}(X)~((unsigned char) reflect((X), 8))
+\item 
+\#define \hyperlink{crc_8c_a2354513de80cf643198f44d7030b74d7}{R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER}(X)~((crc) reflect((X), \hyperlink{crc_8c_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{crc_8c_a5a735798e6972adc694a5428dd7ccaf9}{crc\+Init} (void)
+\item 
+crc \hyperlink{crc_8c_ab78538f7fb5fb0507f5e285b8d2f4be4}{crc\+Fast} (uint datastream\mbox{[}$\,$\mbox{]}, uint n\+Bytes, uint $\ast$rem)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint \hyperlink{crc_8c_a1f03ea9db51bfc22c2cc8f52eca33731}{crc\+Table} \mbox{[}256\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{crc.\+c@{crc.\+c}!R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA@{R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA}}
+\index{R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA@{R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA}{REFLECT_DATA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+F\+L\+E\+C\+T\+\_\+\+D\+A\+TA(
+\begin{DoxyParamCaption}
+\item[{}]{X}
+\end{DoxyParamCaption}
+)~((unsigned char) reflect((X), 8))}\hypertarget{crc_8c_ac5944d40ab44731450a57acd7f027f6a}{}\label{crc_8c_ac5944d40ab44731450a57acd7f027f6a}
+\index{crc.\+c@{crc.\+c}!R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER@{R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER}}
+\index{R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER@{R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER}{REFLECT_REMAINDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+F\+L\+E\+C\+T\+\_\+\+R\+E\+M\+A\+I\+N\+D\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{X}
+\end{DoxyParamCaption}
+)~((crc) reflect((X), {\bf W\+I\+D\+TH}))}\hypertarget{crc_8c_a2354513de80cf643198f44d7030b74d7}{}\label{crc_8c_a2354513de80cf643198f44d7030b74d7}
+\index{crc.\+c@{crc.\+c}!T\+O\+P\+B\+IT@{T\+O\+P\+B\+IT}}
+\index{T\+O\+P\+B\+IT@{T\+O\+P\+B\+IT}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{T\+O\+P\+B\+IT}{TOPBIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+P\+B\+IT~(1 $<$$<$ ({\bf W\+I\+D\+TH} -\/ 1))}\hypertarget{crc_8c_a118ad552670dbefa1df0ba72d147f5e1}{}\label{crc_8c_a118ad552670dbefa1df0ba72d147f5e1}
+\index{crc.\+c@{crc.\+c}!W\+I\+D\+TH@{W\+I\+D\+TH}}
+\index{W\+I\+D\+TH@{W\+I\+D\+TH}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{W\+I\+D\+TH}{WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+I\+D\+TH~(8 $\ast$ sizeof(crc))}\hypertarget{crc_8c_a241aeeb764887ae5e3de58b98f04b16d}{}\label{crc_8c_a241aeeb764887ae5e3de58b98f04b16d}
+Filename\+: \hyperlink{crc_8c}{crc.\+c}
+
+Description\+: Slow and fast implementations of the C\+RC standards.
+
+Notes\+: The parameters for each supported C\+RC standard are defined in the header file \hyperlink{crc_8h}{crc.\+h}. The implementations here should stand up to further additions to that list.
+
+Copyright (c) 2000 by Michael Barr. This software is placed into the public domain and may be used for any purpose. However, this notice must not be changed or removed and no warranty is either expressed or implied by its publication or distribution. 
+
+\subsection{Function Documentation}
+\index{crc.\+c@{crc.\+c}!crc\+Fast@{crc\+Fast}}
+\index{crc\+Fast@{crc\+Fast}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{crc\+Fast(uint datastream[], uint n\+Bytes, uint $\ast$rem)}{crcFast(uint datastream[], uint nBytes, uint *rem)}}]{\setlength{\rightskip}{0pt plus 5cm}crc crc\+Fast (
+\begin{DoxyParamCaption}
+\item[{uint}]{datastream\mbox{[}$\,$\mbox{]}, }
+\item[{uint}]{n\+Bytes, }
+\item[{uint $\ast$}]{rem}
+\end{DoxyParamCaption}
+)}\hypertarget{crc_8c_ab78538f7fb5fb0507f5e285b8d2f4be4}{}\label{crc_8c_ab78538f7fb5fb0507f5e285b8d2f4be4}
+Function\+: \hyperlink{crc_8c_ab78538f7fb5fb0507f5e285b8d2f4be4}{crc\+Fast()}
+
+Description\+: Compute the C\+RC of a given datastream.
+
+Notes\+: \hyperlink{crc_8c_a5a735798e6972adc694a5428dd7ccaf9}{crc\+Init()} must be called first.
+
+Returns\+: The C\+RC of the datastream. \index{crc.\+c@{crc.\+c}!crc\+Init@{crc\+Init}}
+\index{crc\+Init@{crc\+Init}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{crc\+Init(void)}{crcInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void crc\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{crc_8c_a5a735798e6972adc694a5428dd7ccaf9}{}\label{crc_8c_a5a735798e6972adc694a5428dd7ccaf9}
+Function\+: \hyperlink{crc_8c_a5a735798e6972adc694a5428dd7ccaf9}{crc\+Init()}
+
+Description\+: Populate the partial C\+RC lookup table.
+
+Notes\+: This function must be rerun any time the C\+RC standard is changed. If desired, it can be run \char`\"{}offline\char`\"{} and the table results stored in an embedded system\textquotesingle{}s R\+OM.
+
+Returns\+: None defined. 
+
+\subsection{Variable Documentation}
+\index{crc.\+c@{crc.\+c}!crc\+Table@{crc\+Table}}
+\index{crc\+Table@{crc\+Table}!crc.\+c@{crc.\+c}}
+\subsubsection[{\texorpdfstring{crc\+Table}{crcTable}}]{\setlength{\rightskip}{0pt plus 5cm}uint crc\+Table\mbox{[}256\mbox{]}}\hypertarget{crc_8c_a1f03ea9db51bfc22c2cc8f52eca33731}{}\label{crc_8c_a1f03ea9db51bfc22c2cc8f52eca33731}

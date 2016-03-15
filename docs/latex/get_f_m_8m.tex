@@ -1,0 +1,79 @@
+\hypertarget{get_f_m_8m}{}\section{/\+Users/patrick/\+Development/github/crc/src/get\+FM.m File Reference}
+\label{get_f_m_8m}\index{/\+Users/patrick/\+Development/github/crc/src/get\+F\+M.\+m@{/\+Users/patrick/\+Development/github/crc/src/get\+F\+M.\+m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{get_f_m_8m_a4baee84af7a92177c9064ddc2fc010ce}{P} is the C\+RC polynomial \hyperlink{get_f_m_8m_a2ce0aa8ab4152716b92da5d2fa82a9eb}{value} (prefix with 0x to denote a hex value)\%m is the degree of the C\+R\+C polynomial(max
+\item 
+\hyperlink{get_f_m_8m_abf2fd589097e135bdb4238a64d97a147}{if} (m $>$32$\vert$$\vert$w $>$32) error(\textquotesingle{}Polynomial degree and data width must not exceed 32\textquotesingle{})
+\item 
+\hyperlink{get_f_m_8m_affa1d7b17b19e52399b4ab42ff4969d4}{zeros} (32-\/m, 1)\mbox{]}
+\item 
+end \hyperlink{get_f_m_8m_a1820e567248af7936cd669d149e1bd96}{res} (1\+:32, max(m, w)+1\+:32)=0
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+end \hyperlink{get_f_m_8m_a4baee84af7a92177c9064ddc2fc010ce}{P} =\mbox{[}\hyperlink{get_f_m_8m_affa1d7b17b19e52399b4ab42ff4969d4}{zeros}(m-\/length(P),1)
+\item 
+\hyperlink{get_f_m_8m_a1fd406685cbdee605d0a7bebed56fdb0}{F} = \mbox{[}\mbox{[}\hyperlink{get_f_m_8m_a4baee84af7a92177c9064ddc2fc010ce}{P}
+\item 
+\hyperlink{get_f_m_8m_ab0bd7560790c13b656fd58e17e35143e}{res} = \hyperlink{get_f_m_8m_a1fd406685cbdee605d0a7bebed56fdb0}{F}
+\item 
+for \hyperlink{get_f_m_8m_a6f6ccfcf58b31cb6412107d9d5281426}{i}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!if@{if}}
+\index{if@{if}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{if(m $>$32\texttt{"|}\texttt{"|}w $>$32) error(\textquotesingle{}\+Polynomial degree and data width must not exceed 32\textquotesingle{})}{if(m >32||w >32) error('Polynomial degree and data width must not exceed 32')}}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{m}]{, }
+\item[{32$\vert$$\vert$}]{w, }
+\item[{32}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{get_f_m_8m_abf2fd589097e135bdb4238a64d97a147}{}\label{get_f_m_8m_abf2fd589097e135bdb4238a64d97a147}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!res@{res}}
+\index{res@{res}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{res(1\+:32, max(m, w)+1\+:32)=0}{res(1:32, max(m, w)+1:32)=0}}]{\setlength{\rightskip}{0pt plus 5cm}end res (
+\begin{DoxyParamCaption}
+\item[{1\+:32}]{, }
+\item[{max(m, w)+1\+:32}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{get_f_m_8m_a1820e567248af7936cd669d149e1bd96}{}\label{get_f_m_8m_a1820e567248af7936cd669d149e1bd96}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!value@{value}}
+\index{value@{value}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{value(prefix with 0x to denote a hex value)\%m is the degree of the C\+R\+C polynomial(max}{value(prefix with 0x to denote a hex value)%m is the degree of the CRC polynomial(max}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P} is the C\+RC polynomial value (
+\begin{DoxyParamCaption}
+\item[{prefix with 0x to denote a hex}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{get_f_m_8m_a2ce0aa8ab4152716b92da5d2fa82a9eb}{}\label{get_f_m_8m_a2ce0aa8ab4152716b92da5d2fa82a9eb}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!zeros@{zeros}}
+\index{zeros@{zeros}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{zeros(32-\/m, 1)]}{zeros(32-m, 1)]}}]{\setlength{\rightskip}{0pt plus 5cm}zeros (
+\begin{DoxyParamCaption}
+\item[{32-\/}]{m, }
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{get_f_m_8m_affa1d7b17b19e52399b4ab42ff4969d4}{}\label{get_f_m_8m_affa1d7b17b19e52399b4ab42ff4969d4}
+
+
+\subsection{Variable Documentation}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!F@{F}}
+\index{F@{F}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{F}{F}}]{\setlength{\rightskip}{0pt plus 5cm}F = \mbox{[}\mbox{[}{\bf P}}\hypertarget{get_f_m_8m_a1fd406685cbdee605d0a7bebed56fdb0}{}\label{get_f_m_8m_a1fd406685cbdee605d0a7bebed56fdb0}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!i@{i}}
+\index{i@{i}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{i}{i}}]{\setlength{\rightskip}{0pt plus 5cm}for i}\hypertarget{get_f_m_8m_a6f6ccfcf58b31cb6412107d9d5281426}{}\label{get_f_m_8m_a6f6ccfcf58b31cb6412107d9d5281426}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=1:1:w-1
+    \hyperlink{get_f_m_8m_ab0bd7560790c13b656fd58e17e35143e}{res} = mod(\hyperlink{get_f_m_8m_ab0bd7560790c13b656fd58e17e35143e}{res}*\hyperlink{get_f_m_8m_a1fd406685cbdee605d0a7bebed56fdb0}{F},2)
+\end{DoxyCode}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!P@{P}}
+\index{P@{P}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{P}{P}}]{\setlength{\rightskip}{0pt plus 5cm}P =\mbox{[}{\bf zeros}(m-\/length(P),1)}\hypertarget{get_f_m_8m_a4baee84af7a92177c9064ddc2fc010ce}{}\label{get_f_m_8m_a4baee84af7a92177c9064ddc2fc010ce}
+\index{get\+F\+M.\+m@{get\+F\+M.\+m}!res@{res}}
+\index{res@{res}!get\+F\+M.\+m@{get\+F\+M.\+m}}
+\subsubsection[{\texorpdfstring{res}{res}}]{\setlength{\rightskip}{0pt plus 5cm}res = {\bf F}}\hypertarget{get_f_m_8m_ab0bd7560790c13b656fd58e17e35143e}{}\label{get_f_m_8m_ab0bd7560790c13b656fd58e17e35143e}

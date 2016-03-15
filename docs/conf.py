@@ -17,16 +17,17 @@ import os
 
 import subprocess, os
 
-read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
-
-if read_the_docs_build:
-
-    subprocess.call('cd ../doxygen; doxygen', shell=True)
-    
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
+
+# hack for readthedocs to cause it to run doxygen first
+# https://github.com/rtfd/readthedocs.org/issues/388
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+  from subprocess import call 
+  call('doxygen')
 
 # -- General configuration ------------------------------------------------
 
@@ -39,7 +40,15 @@ if read_the_docs_build:
 extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.todo',
+    'sphinx.ext.viewcode',
+    'breathe',
 ]
+
+# Breathe extension variables
+breathe_projects = { "crc": "doxyxml/" }
+breathe_default_project = "crc"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

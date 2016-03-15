@@ -11,6 +11,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+.. doxygenindex:: crc
+   :outline:
+
+.. doxygenfcuntion:: reflect
+.. doxygenfcuntion:: crcInit
+.. doxygenfcuntion:: crcFast
 
 
 Indices and tables
